@@ -1,12 +1,12 @@
-import app from "./src/app";
+import app from './src/app'
 
 const start = async () => {
   try {
-    await app.listen({ port: 8000 });
+    await app.listen({ port: 8000 })
   } catch (err) {
-    app.log.error(err);
-    process.exit(1);
+    app.log.error(err)
+    process.exit(1)
   }
-};
+}
 
-start();
+start()
