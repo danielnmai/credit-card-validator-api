@@ -4,19 +4,19 @@
 
 In the project directory, you can run:
 
-### `npm run dev`
+### `yarn dev`
 
 To start the app in dev mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:8000](http://localhost:8000) to view it in the browser.
 
-### `npm start`
+### `yarn build`
 
-For production mode
+To transcribe source code from Typescript to Javascript and output to the `/build` folder.
 
-### `npm run test`
+### `yarn start`
+
+For production mode. Run the server from the `/build` folder.
+
+### `yarn test`
 
 Run the test cases.
-
-## Learn More
-
-To learn Fastify, check out the [Fastify documentation](https://fastify.dev/docs/latest/).
