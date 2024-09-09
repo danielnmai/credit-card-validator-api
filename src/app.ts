@@ -1,3 +1,4 @@
+import cors from '@fastify/cors'
 import Fastify, {
   ContextConfigDefault,
   FastifyReply,
@@ -32,7 +33,7 @@ export type TypedReply<TSchema extends FastifySchema> = FastifyReply<
 
 export const getApp = () => {
   const app = Fastify({
-    // logger: true,
+    logger: true,
     ignoreTrailingSlash: true,
     trustProxy: true
   }).withTypeProvider<ZodTypeProvider>()
@@ -40,6 +41,7 @@ export const getApp = () => {
   app.setValidatorCompiler(validatorCompiler)
   app.setSerializerCompiler(serializerCompiler)
 
+  app.register(cors, {})
   app.register(routes)
 
   return app
